@@ -7,7 +7,7 @@
     {
       "js": ["scripts/inject.js"],
       "css": ["css/styles.css"],
-      "matches": ["*.bandcamp.com/*"]
+      "matches": ["*://*.bandcamp.com/*"]
     }
   ]
 }
