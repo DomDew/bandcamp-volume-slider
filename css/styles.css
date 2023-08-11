@@ -27,6 +27,7 @@
   width: 22px;
   height: 10px;
   background: #fff;
+  border: 1px solid #bebebe;
   cursor: pointer;
 }
 
@@ -34,5 +35,6 @@
   width: 22px;
   height: 10px;
   background: #fff;
+  border: 1px solid #bebebe;
   cursor: pointer;
 }
