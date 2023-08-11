@@ -2,6 +2,12 @@ const player = document.querySelector('.inline_player');
 const audio = document.querySelector('audio');
 
 if (player && audio) {
+  const storedVolume = localStorage.getItem('volume');
+
+  if (storedVolume) {
+    audio.volume = storedVolume;
+  }
+
   /**
    * Create elements
    */
@@ -20,7 +26,7 @@ if (player && audio) {
   volSlider.setAttribute('max', 100);
   volSlider.setAttribute('step', 1);
   volSlider.className = 'volume-slider';
-  volSlider.value = audio.volume * 100;
+  volSlider.value = storedVolume * 100 || audio.volume * 100;
 
   /**
    * Insert elements
@@ -34,6 +40,7 @@ if (player && audio) {
    */
   const handleChange = (e) => {
     audio.volume = e.target.value / 100;
+    localStorage.setItem('volume', e.target.value / 100);
   };
 
   volSlider.onchange = handleChange;
