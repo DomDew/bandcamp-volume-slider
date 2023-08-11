@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Bandcamp Volume Slider",
+  "version": "1.0",
+  "description": "Adds a volume slider to the Bandcamp player",
+  "content_scripts": [
+    {
+      "js": ["scripts/inject.js"],
+      "css": ["css/styles.css"],
+      "matches": ["*.bandcamp.com/*"]
+    }
+  ]
+}
